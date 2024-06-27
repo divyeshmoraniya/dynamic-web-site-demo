@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 550px;
+    gap: 200px;
+    display: flex;
+    background-image: url("pngtree-red-and-blue-neon-lit-3d-geometric-corridor-4k-uhd-abstract-image_3660615.jpg");
+    background-size: unset;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: center;
+    font-family: "Arial", sans-serif;
+    
+
+
+}
+
+nav button {
+    height: 60px;
+    width: 60px;
+    color: black;
+    background-color: gray;
+    border-radius: 50%;
+    margin-left: 7px;
+    margin-top: 5px;
+}
+
+nav button:hover {
+    color: greenyellow;
+    background-color: transparent;
+    box-shadow: 4px 5px 30px gold;
+    cursor: pointer;
+
+}
+
+.title {
+    font-size: 35px;
+    font-weight: 600;
+    color: greenyellow;
+    height: 100px;
+
+}
+
+.title:hover {
+    color: red;
+    text-shadow: 4px 5px 30px gold;
+}
+
+
+ul {
+    position: relative;
+    transform: skewY(-15deg);
+    top: 0;
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+    width: 200px;
+    padding: 15px;
+    background: rgb(34, 33, 33);
+    z-index: calc(1*var(--i));
+    transition: 0.5s;
+}
+
+ul li:hover {
+    background: purple;
+    transform: translate(40px, 40px);
+    box-shadow: 4px 4px 5000px purple;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    filter: brightness(0.8);
+    background: rgb(64, 60, 60);
+    transform-origin: right;
+    transform: skewY(45deg);
+
+}
+
+ul li:hover::before {
+
+    background: red;
+    box-shadow: 4px 5px 50px red;
+}
+
+ul li::after {
+    content: attr(data-text);
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    width: calc(100% - 20px);
+    display: flex;
+    color: gray;
+    text-transform: uppercase;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding-left: 20px;
+    height: 40px;
+    background: rgb(64, 60, 60);
+    transform-origin: bottom;
+    transform: skewX(45deg);
+}
+
+ul li:hover::after {
+    color: green;
+    background-color: goldenrod;
+    box-shadow: 4px 5px 50px goldenrod;
+
+}
+
+ul li a {
+
+    text-decoration: none;
+    color: white;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+ul li:hover a {
+    color: gold;
+    text-shadow: 4px 4px 366px red;
+}
+
+
+ul li:last-child {
+    box-shadow: -10px 100px 200px gold;
+}
+
+
+ul li a span {
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    text-align: center;
+    height: 100%;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    opacity: 0.7;
+}
+
+.lb {
+    height: 130px;
+    width: 200px;
+    margin-top: 200px;
+    margin-left: -856px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(112, 112, 112);
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 26px;
+    padding-left: 60px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    padding-right: 57px;
+    padding-bottom: 23px;
+    border: 3px solid green;
+    box-shadow: 5px 5px 55px green;
+}
+
+
+#text {
+    border-radius: 40px 5px 55px;
+    color: purple;
+    border: 2px solid purple;
+    box-shadow: 3px 3px 55px purple;
+}
+
+#password {
+    border-radius: 40px 5px 55px;
+    color: green;
+    border: 2px solid green;
+    box-shadow: 3px 3px 55px green;
+}
+
+#btn {
+    border-radius: 40px 5px 55px;
+    color: rgb(104, 104, 20);
+    border: 2px solid yellow;
+    box-shadow: 3px 3px 55px yellow;
+}
+
+#btn:hover {
+    border-radius: 40px 5px 55px;
+    color: red;
+    border: 2px solid red;
+    box-shadow: 3px 3px 55px red;
+    box-shadow: 3px 3px 55px purple;
+}
+
+#btn:active {
+    border-radius: 50%;
+    box-shadow: 3px 3px 55px red;
+
+}
+
+.lb a {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    color: purple;
+
+}
+
+.lb a:hover {
+
+    color: red;
+    text-shadow: 4px 8px 30px rgb(162, 0, 255);
+}
+
+.lb a:active {
+    color: yellow;
+    text-shadow: 4px 8px 30px white;
+}
+
+.hidden {
+    opacity: 0;
+    /* Make navbar invisible when hidden */
+    transition: opacity 0.5s ease;
+
+}
